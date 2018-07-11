@@ -1,0 +1,29 @@
+{
+	"name": "Automatic Bookmark Extension",
+	"version": "1.0",
+	"description": "Easy Bookmarking!",
+	"manifest_version": 2,
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": ["jquery-3.3.1.min.js", "content.js"]
+		}
+	],
+	"permissions": ["alarms", "notifications", "storage", "tabs", "bookmarks"],
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"browser_action": {
+		"default_title": "Automatic Bookmarking!",
+		"default_popup": "popup.html",
+		"default_icon": "arrow_icon.png"
+	},
+	"icons": {
+		"16": "icon.png"
+	}
+	
+
+}
